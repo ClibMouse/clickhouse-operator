@@ -822,7 +822,7 @@ func (c *OperatorConfig) String(hideCredentials bool) string {
 	if hideCredentials {
 		conf = c.DeepCopy()
 		conf.ClickHouse.Config.User.Default.Password = PasswordReplacer
-		conf.ClickHouse.Access.Secret.Runtime.Password = PasswordReplacer
+		conf.ClickHouse.Config.User.Default.Secret.Runtime.Password = PasswordReplacer
 		conf.ClickHouse.Access.Username = UsernameReplacer
 		conf.ClickHouse.Access.Password = PasswordReplacer
 		conf.ClickHouse.Access.Secret.Runtime.Username = UsernameReplacer
